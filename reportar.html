@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Formulario para registrar un nuevo rescate en el Refugio Esperanza."
+    >
+    <title>Registrar rescate | Refugio Esperanza</title>
+</head>
+<body>
+    <header>
+        <img
+            src="assets/img/logo-refugio-esperanza.png"
+            alt="Logo del Refugio Esperanza"
+            width="110"
+        >
+
+        <h1>Refugio Esperanza</h1>
+        <p>Sistema de rescate, recuperación y adopción responsable.</p>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li>
+                    <a href="reportar.html" aria-current="page">
+                        Registrar rescate
+                    </a>
+                </li>
+                <li><a href="rescates.html">Consultar casos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Registrar un nuevo rescate</h2>
+            <p>
+                Complete los datos disponibles para registrar el ingreso
+                del animal y determinar la atención necesaria.
+            </p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Datos del animal</legend>
+
+                    <p>
+                        <label for="nombre-caso">
+                            Nombre provisional o título del caso:
+                        </label>
+                        <input
+                            type="text"
+                            id="nombre-caso"
+                            name="nombre-caso"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="categoria">Categoría:</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="">Seleccione una categoría</option>
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                            <option value="fauna-silvestre">
+                                Fauna silvestre
+                            </option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="fecha-rescate">Fecha del rescate:</label>
+                        <input
+                            type="date"
+                            id="fecha-rescate"
+                            name="fecha-rescate"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="lugar">Lugar del hallazgo:</label>
+                        <input
+                            type="text"
+                            id="lugar"
+                            name="lugar"
+                            required
+                        >
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Nivel de urgencia médica</legend>
+
+                    <input
+                        type="radio"
+                        id="urgencia-alta"
+                        name="urgencia"
+                        value="alta"
+                        required
+                    >
+                    <label for="urgencia-alta">Alta</label>
+
+                    <input
+                        type="radio"
+                        id="urgencia-media"
+                        name="urgencia"
+                        value="media"
+                    >
+                    <label for="urgencia-media">Media</label>
+
+                    <input
+                        type="radio"
+                        id="urgencia-baja"
+                        name="urgencia"
+                        value="baja"
+                    >
+                    <label for="urgencia-baja">Baja</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Condición del rescate</legend>
+
+                    <p>
+                        <label for="condicion">Condición inicial:</label>
+                        <select id="condicion" name="condicion" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="lesionado">Lesionado</option>
+                            <option value="desnutrido">Desnutrido</option>
+                            <option value="abandonado">Abandonado</option>
+                            <option value="sin-lesiones">
+                                Sin lesiones visibles
+                            </option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="descripcion">
+                            Descripción detallada del estado del animal:
+                        </label>
+                        <br>
+                        <textarea
+                            id="descripcion"
+                            name="descripcion"
+                            rows="7"
+                            cols="50"
+                            required
+                        ></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Registrar rescate</button>
+                    <button type="reset">Limpiar formulario</button>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Información para el registro</h2>
+
+            <article>
+                <h3>Urgencia alta</h3>
+                <p>
+                    Se utiliza cuando el animal presenta lesiones graves
+                    o necesita atención veterinaria inmediata.
+                </p>
+            </article>
+
+            <article>
+                <h3>Urgencia media</h3>
+                <p>
+                    Corresponde a casos que requieren atención pronta,
+                    pero el animal se encuentra estable.
+                </p>
+            </article>
+
+            <article>
+                <h3>Urgencia baja</h3>
+                <p>
+                    Se aplica cuando el animal no presenta riesgo inmediato,
+                    pero necesita protección y seguimiento.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contacto: refugio.esperanza@correo.com</p>
+        <p>&copy; 2026 Refugio Esperanza.</p>
+    </footer>
+</body>
+</html>
